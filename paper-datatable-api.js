@@ -289,7 +289,7 @@ class DtPaperDatatableApi
   _fillColumns() {
     this.async(() => {
     const pgTrs = this.shadowRoot.querySelectorAll('.paper-datatable-api-tr');
-
+               console.log(pgTrs);
     pgTrs.forEach((pgTr, i) => {
       const rowData = pgTr.rowData;
 
@@ -315,7 +315,7 @@ class DtPaperDatatableApi
         }
 
         const valueFromRowData = this._extractData(rowData, paperDatatableApiColumn.property);
-
+                            console.log(paperDatatableApiColumn);
         const otherPropertiesValue = {};
         paperDatatableApiColumn.otherProperties.forEach(property => {
           otherPropertiesValue[property] = this._extractData(rowData, property);
@@ -342,7 +342,7 @@ class DtPaperDatatableApi
         pgTr.appendChild(tdLocal);
       });
     });
-               }, 200);
+               }, 500);
   }
 
   _selectAllCheckbox(event) {
