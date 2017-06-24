@@ -477,6 +477,7 @@ class DtPaperDatatableApi
     this._columnsHeight = this.selectable ? this._columns.length + 1 : this._columns.length;
     if (generateTr) {
       this._init(this.data);
+        console.log(this.data);
     }
   }
 
