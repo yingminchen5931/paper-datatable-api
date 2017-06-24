@@ -292,7 +292,7 @@ class DtPaperDatatableApi
                console.log(pgTrs);
     pgTrs.forEach((pgTr, i) => {
       const rowData = pgTr.rowData;
-
+                  console.log(rowData);
       this._columns.forEach((paperDatatableApiColumn, p) => {
         if (this.selectable && p === this.checkboxColumnPosition) {
           const tdSelectable = document.createElement('td');
@@ -315,11 +315,14 @@ class DtPaperDatatableApi
         }
 
         const valueFromRowData = this._extractData(rowData, paperDatatableApiColumn.property);
-                            console.log(paperDatatableApiColumn.property);
+                            console.log(this.data);
         const otherPropertiesValue = {};
-        paperDatatableApiColumn.otherProperties.forEach(property => {
+       /* paperDatatableApiColumn.otherProperties.forEach(property => {
           otherPropertiesValue[property] = this._extractData(rowData, property);
-        });
+        });*/
+                        
+                            
+
 
         const tdLocal = document.createElement('td');
         if (paperDatatableApiColumn.tdCustomStyle) {
@@ -477,7 +480,6 @@ class DtPaperDatatableApi
     this._columnsHeight = this.selectable ? this._columns.length + 1 : this._columns.length;
     if (generateTr) {
       this._init(this.data);
-        console.log(this.data);
     }
   }
 
