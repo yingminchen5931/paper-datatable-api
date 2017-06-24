@@ -1060,4 +1060,4 @@ class DtPaperDatatableApi {
     }
 }
 
-Polymer(DtPaperDatatableApi);
+customElements.define(DtPaperDatatableApi.is, DtPaperDatatableApi);
