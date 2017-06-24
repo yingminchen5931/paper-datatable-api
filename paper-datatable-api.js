@@ -316,7 +316,7 @@ class DtPaperDatatableApi
 
         const valueFromRowData = this._extractData(rowData, paperDatatableApiColumn.property);
                             console.log(this.data);
-        const otherPropertiesValue = {};
+        //const otherPropertiesValue = {};
        /* paperDatatableApiColumn.otherProperties.forEach(property => {
           otherPropertiesValue[property] = this._extractData(rowData, property);
         });*/
@@ -334,7 +334,7 @@ class DtPaperDatatableApi
 
         const instance = paperDatatableApiColumn.fillTemplate(
           valueFromRowData,
-          otherPropertiesValue,
+        
         );
 
         if (paperDatatableApiColumn.hideable && paperDatatableApiColumn.hidden) {
