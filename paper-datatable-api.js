@@ -315,9 +315,9 @@ class DtPaperDatatableApi
         }
 
         const valueFromRowData = this._extractData(rowData, paperDatatableApiColumn.property);
-                            console.log(paperDatatableApiColumn);
+                            console.log(paperDatatableApiColumn.properties);
         const otherPropertiesValue = {};
-        paperDatatableApiColumn.otherProperties.forEach(property => {
+        paperDatatableApiColumn.properties.forEach(property => {
           otherPropertiesValue[property] = this._extractData(rowData, property);
         });
 
